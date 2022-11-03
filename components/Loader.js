@@ -1,20 +1,29 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  display: flex;
+  flexDirection: column;
+  alignItems: center;
+  height: 50%;
+  width: 50%;
+  margin: 10em;
+`
+
+const Squares = styled.div`
   .self-building-square-spinner,
   .self-building-square-spinner * {
     box-sizing: border-box;
   }
 
   .self-building-square-spinner {
-    height: 40px;
-    width: 40px;
+    height: 140px;
+    width: 140px;
     top: calc(-10px * 2 / 3);
   }
 
   .self-building-square-spinner .square {
-    height: 10px;
-    width: 10px;
+    height: 30px;
+    width: 30px;
     top: calc(-10px * 2 / 3);
     margin-right: calc(10px / 3);
     margin-top: calc(10px / 3);
@@ -87,17 +96,19 @@ const Wrapper = styled.div`
 export default function Loader() {
   return (
     <Wrapper>
-      <div className="self-building-square-spinner">
-        <div className="square"></div>
-        <div className="square"></div>
-        <div className="square"></div>
-        <div className="square clear"></div>
-        <div className="square"></div>
-        <div className="square"></div>
-        <div className="square clear"></div>
-        <div className="square"></div>
-        <div className="square"></div>
-      </div>
+      <Squares>
+        <div className="self-building-square-spinner">
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square clear"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square clear"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+        </div>
+      </Squares>
     </Wrapper>
   );
 }
